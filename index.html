@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskForge Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🔥 TaskForge Pro</h1>
+            <p>نظام إدارة المهام الذكي</p>
+        </header>
+
+        <div class="stats">
+            <div>
+                <h3>إجمالي المهام</h3>
+                <span id="totalTasks">0</span>
+            </div>
+            <div>
+                <h3>المكتملة</h3>
+                <span id="completedTasks">0</span>
+            </div>
+            <div>
+                <h3>نسبة الإنجاز</h3>
+                <span id="progressPercent">0%</span>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progressFill"></div>
+        </div>
+
+        <div class="task-input">
+            <input type="text" id="taskTitle" placeholder="أدخل المهمة...">
+            
+            <select id="priority">
+                <option value="low">منخفضة</option>
+                <option value="medium">متوسطة</option>
+                <option value="high">عالية</option>
+            </select>
+
+            <select id="category">
+                <option value="study">دراسة</option>
+                <option value="work">عمل</option>
+                <option value="personal">شخصي</option>
+            </select>
+
+            <button onclick="addTask()">إضافة</button>
+        </div>
+
+        <div class="filters">
+            <button onclick="filterTasks('all')">الكل</button>
+            <button onclick="filterTasks('completed')">مكتملة</button>
+            <button onclick="filterTasks('pending')">قيد التنفيذ</button>
+        </div>
+
+        <ul id="taskList"></ul>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
